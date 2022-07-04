@@ -121,6 +121,14 @@
   # };
 
   # List services that you want to enable:
+  # Nvidia Settings
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.nvidiaSettings = true;
+  hardware.opengl.enable = true;
+  #hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+  # Steam Settings
+  programs.steam.enable = true;
 
   # Linux kernel
   #  boot.kernelPackages = pkgs.linuxPackages_latest;
